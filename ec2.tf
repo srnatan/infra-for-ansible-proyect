@@ -28,7 +28,7 @@ resource "aws_instance" "ec2_privada" {
       env          = "prod"
       AnsibleGroup = "EC2_1"
     },
-    count.index == 0 ? { GitGroup = "Si" } : {}
+    count.index == 0 ? { GitGroup = "clone" } : {}
   )
 }
 
