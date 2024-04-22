@@ -25,3 +25,18 @@ variable "mi_ip"{
   description = "valor de mi ip para bastion host"
   type        = list(string)
 }
+
+variable "db_name" {
+  type = string
+  default = "my_database"
+}
+
+variable "master_user" {
+  type = string
+  default = "admin"
+}
+
+variable "master_pass" {
+  type = string
+  default = "password123"
+}
