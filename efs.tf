@@ -5,6 +5,10 @@ resource "aws_efs_file_system" "ansible_efs" {
   lifecycle_policy {
     transition_to_ia = "AFTER_30_DAYS"
   }
+
+  tags = {
+    Name: "ansible_efs"
+  }
 }
 
 resource "aws_efs_mount_target" "efs_mt" {
